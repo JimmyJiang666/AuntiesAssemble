@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <a href="/logout">Logout</a>
+    <% orderList.forEach(function(order) { %>
+      <div class="">
+        <p><%= order.dish1Name %></p>
+        <p><%= order.dish1Amount %></p>
+        <p><%= order.dish2Name %></p>
+        <p><%= order.dish2Amount %></p>
+        <p><%= order.dish3Name %></p>
+        <p><%= order.dish3Amount %></p>
+        <p><%= order.total %></p>
+        <p><%= order.orderStatus %></p>
+
+      </div>
+
+
+    <% }); %>
+
+
+
+  </body>
+</html>

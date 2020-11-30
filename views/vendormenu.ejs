@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <a href="/logout">Logout</a>
+    <form class="" action="/vendormenu/<%=customerId%>/<%=foundVendor._id%>" method="post">
+      <p><%= foundVendor.dish1Name %></p>
+      <p><%= foundVendor.dish1Des %></p>
+      <input type="text" name="dish1Amount" placeholder="Amount" value="">
+      <p><%= foundVendor.dish2Name %></p>
+      <p><%= foundVendor.dish2Des %></p>
+      <input type="text" name="dish2Amount" placeholder="Amount" value="">
+      <p><%= foundVendor.dish3Name %></p>
+      <p><%= foundVendor.dish3Des %></p>
+      <input type="text" name="dish3Amount" placeholder="Amount" value="">
+      <button type="submit" name="button">Check Out</button>
+    </form>
+
+  </body>
+</html>

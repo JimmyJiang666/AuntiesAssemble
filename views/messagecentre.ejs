@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <a href="/logout">Logout</a>
+
+    <div class="">
+      <h2>New Orders</h2>
+      <% foundNewOrders.forEach(function(order) { %>
+        <div class="">
+          <form class="" action="/changeorderstatus/<%= order.vendorId %>/<%= order._id %>" method="post">
+            <p><%= order.dish1Name %></p>
+            <p><%= order.dish1Amount %></p>
+            <p><%= order.dish2Name %></p>
+            <p><%= order.dish2Amount %></p>
+            <p><%= order.dish3Name %></p>
+            <p><%= order.dish3Amount %></p>
+            <p><%= order.total %></p>
+            <button type="submit" name="button" value="Accept">Accept</button>
+            <button type="submit" name="button" value="Decline">Decline</button>
+          </form>
+
+        </div>
+      <% }); %>
+    </div>
+
+    <div class="">
+      <h2>Past Orders</h2>
+      <% foundPastOrders.forEach(function(order) { %>
+        <div class="">
+
+          <p><%= order.dish1Name %></p>
+          <p><%= order.dish1Amount %></p>
+          <p><%= order.dish2Name %></p>
+          <p><%= order.dish2Amount %></p>
+          <p><%= order.dish3Name %></p>
+          <p><%= order.dish3Amount %></p>
+          <p><%= order.total %></p>
+          <p><%= order.orderStatus %></p>
+        </div>
+      <% }); %>
+    </div>
+
+
+  </body>
+</html>

@@ -5,9 +5,11 @@
     <title></title>
   </head>
   <body>
+    <a href="/logout">Logout</a>
     <% vendorList.forEach(function(vendorMenu) { %>
-      <a href="#"><%= vendorMenu.storeName %></a>
+      <a href="/vendormenu/<%= customerId %>/<%= vendorMenu._id %>"><%= vendorMenu.storeName %></a>
     <% }); %>
+    <a href="/myorders/<%= customerId %>">My Orders</a>
 
   </body>
 </html>
