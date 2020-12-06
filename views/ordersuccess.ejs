@@ -3,18 +3,14 @@
 
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <!-- Font Awesome -->
-  <script src="https://kit.fontawesome.com/6fad3641f2.js" crossorigin="anonymous"></script>
-  <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-
+  <title>AuntiesAssemble</title>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700;900&family=Ubuntu&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=ZCOOL+QingKe+HuangYou&display=swap" rel="stylesheet">
-  <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/css/vendorlist.css">
-  <title>Vendor List</title>
+  <link rel="stylesheet" href="/css/vendormenu.css">
+  <title></title>
 </head>
 
 <body>
@@ -28,34 +24,19 @@
         <ul class='navbar-nav ml-auto'>
 
           <li class='nav-item'>
-            <a href="/myorders/<%= customerId %>">My Orders</a>
+            <a class='nav-link title-font' href="/logout">Logout</a>
           </li>
 
         </ul>
       </div>
-
     </nav>
   </div>
-  <div class="header1">
-    Vendors List
-  </div>
-  <!-- cards vendors -->
-  <div class="row row-cols-1 row-cols-md-3 content1">
-    <!-- here you'll put the loop  -->
-    <% vendorList.forEach(function(vendorMenu) { %>
-    <div class="col mb-4">
-      <div class="card h-100 text-white bg-info mb-3">
-        <div class="card-body">
-          <a class="card-title text-white text-left" href="/vendormenu/<%= customerId %>/<%= vendorMenu._id %>"><%= vendorMenu.storeName %></a>
-          <!-- this will be text for their business description -->
-          <p class="card-text"><%= vendorMenu.storeInfo %></p>
-        </div>
-      </div>
-    </div>
-    <% }); %>
 
-
-
+  <div class="success-message">
+    <h1>Order Successfully Placed!</h1>
+    <p>Check its status in "My Orders"</p>
+    <a href="/myorders/<%=customerId%>" class="btn btn-dark btn-lg download-btn">My Orders</a>
+    <a href="/" class="btn btn-dark btn-lg download-btn">Home Page</a>
   </div>
 
   <footer class="white" id="footer">
@@ -71,6 +52,3 @@
 </body>
 
 </html>
-
-
-<!-- for equal height cards -->
